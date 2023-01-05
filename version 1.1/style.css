@@ -1,0 +1,86 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.header
+{
+    box-sizing: border-box;
+    background-color: #dedede;
+    width: 100%;
+    align-items: center;
+    padding: 5px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #dedede;
+}
+.main>h2
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.main p{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.main button
+{
+    background-color: rgb(80, 79, 79);
+    color: rgb(245, 56, 56);
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+}
+.main span
+{
+    padding: 10px;
+    margin-top: 10px;
+}
+.main1
+{
+    width: 100%;
+    flex-direction: column;
+    /* background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200713/pngtree-d-indonesia-national-flag-frame-border-background-can-be-used-for-image_352785.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;*/
+} 
+@media(min-width:568px)
+{
+    .main1{
+        flex-direction: row;
+    }
+}
+.box
+{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
+.neo
+{
+    border-radius: 25px;
+background: #dedede;
+box-shadow:  20px 20px 60px #bdbdbd,
+             -20px -20px 60px #ffffff;
+}
+.ccf
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://i.ibb.co/7tdnMp5/icon.png' rel='icon' type='image/x-icon'/>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <title>Free Fire Partner Program</title>
+    <style>
+        body{
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+        }
+      </style>
+</head>
+<body>
+    <div  class="join">
+        <form name="google-sheet">
+            <label for="">Your Official Name (As per Government ID)</label>
+            <input id="join_input" placeholder="Name" name="Name"  type="text">
+            <input id="join_input" placeholder="Email" name="email"  type="text">
+            <input  id="join_input" placeholder="Phone No" name="Phone"   type="tel"></input>
+            <input id="join_input" placeholder="Channel Name"  name="Channel"    type="text" name="" id="">
+            <input id="join_input" placeholder="Channel Link"   name="Link"   type="url" name="" id="">
+            <input id="join_input"  placeholder="Subscriber Count" name="Subscriber" type="number" >
+            <input id="login_btn" type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+    <div style="display: none;" class="thank">
+        <h2>Thank You!</h2>
+        <p>Your form has been submitted, our team will review and will contact you within 24 hours.</p>
+    </div>
+    <script>const scriptURL = 'https://script.google.com/macros/s/AKfycbxp4lREQWKMaX9R6hAFNgh7yVXyOM9sV9hTQ19hSJp5P9uxpZmRLnWO8IXN68O3H7dQ/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => thank())
+            .catch(error => console.error('Error!', error.message))
+        })
+
+        function thank(){
+            w3.hide('.join');
+            w3.show('.thank');
+        }
+    </script>
+</body>
+</html>
